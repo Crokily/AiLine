@@ -12,6 +12,12 @@ agents:
       你的返回结果只能包含中译英的翻译结果，不要对文本过度思考返回与翻译无关的东西。
       句子中的关键句式和短语请加粗。
       每条结果都必须是完整的翻译，不能是原句其中的一句
+    generation_config:
+      temperature: 1
+      top_p: 0.95
+      top_k: 40
+      max_output_tokens: 8192
+      response_mime_type: "text/plain"
     history:
       - role: user
         parts:
