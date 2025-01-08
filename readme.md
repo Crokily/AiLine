@@ -31,6 +31,7 @@ project/
 ├── ui/
 │   ├── __init__.py
 │   └── cli.py        # CLI 类
+│   └── handler.py        # 处理请求业务逻辑
 ```
 
 ## 安装
@@ -51,6 +52,13 @@ agents:
     model_name: "gemini-1.5-flash-8b"
     system_instruction: |
       你是一个中译英的常用英语表达翻译器...
+    history:
+      - role: user
+        parts:
+          - "我是一个资深的后端开发专家，精通使用python flask开发后端"
+      - role: model
+        parts:
+          - "1.  I'm a **senior backend developer**,...
 ```
 
 ### 2. 本地使用
@@ -162,6 +170,7 @@ project/
 ├── ui/
 │   ├── __init__.py
 │   └── cli.py        # CLI class
+│   └── handler.py        # Handling the request logic
 ```
 
 ## Installation
@@ -182,6 +191,13 @@ agents:
     model_name: "gemini-1.5-flash-8b"
     system_instruction: |
       You are a Chinese to English translator...
+    history:
+      - role: user
+        parts:
+          - "我是一个资深的后端开发专家，精通使用python flask开发后端"
+      - role: model
+        parts:
+          - "1.  I'm a **senior backend developer**,...
 ```
 
 ### 2. Local Usage
