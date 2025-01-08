@@ -9,6 +9,7 @@ class Agent:
         model_name="gemini-1.5-flash-8b",
         generation_config=None,
         system_instruction=None,
+        history=None,
     ):
         self.name = name
         # 配置API密钥
@@ -36,8 +37,12 @@ class Agent:
             system_instruction=self.system_instruction,
         )
 
+        self.history = history
+
         # 创建聊天会话
-        self.chat_session = self.model.start_chat()
+        self.chat_session = self.model.start_chat(
+            history=self.history,
+        )
 
     def process(self, text):
         if not text:

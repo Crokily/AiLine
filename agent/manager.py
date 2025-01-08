@@ -19,6 +19,7 @@ class AgentManager:
                 model_name=agent_config.get('model_name'),
                 generation_config=agent_config.get('generation_config'),
                 system_instruction=agent_config.get('system_instruction'),
+                history=agent_config.get('history'),
             )
         return agents
 

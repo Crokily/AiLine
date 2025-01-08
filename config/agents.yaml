@@ -1,6 +1,6 @@
 agents:
   - name: translator
-    model_name: "gemini-1.5-flash-8b"
+    model_name: "gemini-2.0-flash-exp"
     system_instruction: |
       你是一个中译英的常用英语表达翻译器，我把我想要用英语表达的一句中文发给你，
       你告诉我用英语表达这句话的2到3种方式。
@@ -11,6 +11,13 @@ agents:
       输出要求：
       你的返回结果只能包含中译英的翻译结果，不要对文本过度思考返回与翻译无关的东西。
       句子中的关键句型请加粗。
+    history:
+      - role: user
+        parts:
+          - "我是在上个学期末了解到AI协会的"
+      - role: model
+        parts:
+          - "1. I **knew about** the AI club at the end of last semester.\n2. I **found out about** the AI club last semester.\n3. I **heard of** the AI club at the end of last term.\n"
   - name: summarizer
     model_name: "gemini-1.5-flash-8b"
     system_instruction: |
