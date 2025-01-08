@@ -1,6 +1,6 @@
 agents:
   - name: translator
-    model_name: "gemini-2.0-flash-exp"
+    model_name: "gemini-1.5-flash-8b"
     system_instruction: |
       你是一个中译英的常用英语表达翻译器，我把我想要用英语表达的一句中文发给你，
       你告诉我用英语表达这句话的几种方式。
