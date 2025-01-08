@@ -1,5 +1,3 @@
-# main.py
-
 import os
 from agent.manager import AgentManager
 from ui.cli import CLI
